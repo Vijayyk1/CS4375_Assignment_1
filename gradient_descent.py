@@ -67,12 +67,9 @@ theta = theta_list[-1]
 y_test_predict = np.dot(X_test, theta)
 rmse = (np.sqrt(mean_squared_error(y_test, y_test_predict)))
 r2 = r2_score(y_test, y_test_predict)
-#Output for log
-with open('gradient_descent_log.txt', 'w') as f: #Used to copy paste onto my report for analysis of various trials
-    f.write(f'Learning rate: {alpha}\n')
-    f.write(f'Number of iterations: {m}\n')
-    f.write(f'MSE on test set: {rmse}\n')  
-    f.write(f'R2 on test set: {r2}\n')
-print(f'Test MSE: {rmse}')
-print(f'Test R2: {r2}')
+#Output for log and used to copy paste onto my report for analysis of various trials
+print(f'Learning rate: {alpha}\n')
+print(f'Number of iterations: {m}\n')
+print(f'MSE on test set: {rmse}\n')  
+print(f'R2 on test set: {r2}\n')
 print(f'Weight Coefficients: {theta}')
