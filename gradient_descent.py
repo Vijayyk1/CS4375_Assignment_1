@@ -1,8 +1,11 @@
 import pandas as pd
 import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
 from sklearn.metrics import r2_score
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler, LabelEncoder
+from sklearn.linear_model import SGDRegressor
 from sklearn.metrics import mean_squared_error
 
 #Getting the Dataset from my GitHub
@@ -73,3 +76,10 @@ print(f'Number of iterations: {m}\n')
 print(f'MSE on test set: {rmse}\n')  
 print(f'R2 on test set: {r2}\n')
 print(f'Weight Coefficients: {theta}')
+
+sns.histplot(data = data, x = "safety")
+plt.title('Evaluation of Cars')
+plt.xlabel('Safety Rating')
+plt.ylabel('Frequency')
+plt.grid(True)
+plt.show()
